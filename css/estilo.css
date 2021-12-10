@@ -1,0 +1,277 @@
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+:root{
+    --cor-rosa-cereja:#FE0050;
+    --cor-rosa-escuro:#DD0136;
+    --cor-rosa-escuro-1:#C9003F;
+    --cor-rosa-escuro-2:#B5022C;
+
+    --cor-azul-mar:#0AB4B4;
+    --cor-azul-escuro:#007474;
+    --cor-azul-claro:#68D6D6;
+
+    --cor-rosa-medio:#FF2C6E;
+    --cor-rosa-claro:#FF7DAC;
+    --cor-rosa-nav-1:#FF5390;
+    --cor-rosa-nav-2:#E71660;
+
+    --cor-casquinha:#F5B55D;
+    --cor-mostarda:#F89D22;
+
+    --fonte:'Raleway', arial, sans-serif;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family:var(--fonte);
+    font-size: 1.6rem;
+    color:#FFF
+}
+
+img{
+    max-width: 100%;
+}
+
+header .topo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 230px;
+    background: radial-gradient(50% 50% at 50% 50%, #FE0050 0%, #DD0136 100%);
+}
+
+header .topo > h1{
+    color:#FFF;
+    font-size:6rem;
+    font-family:var(--fonte);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.menu-navegacao{
+    width: 100%;
+    background-color:var(--cor-rosa-nav-1) ;
+    border-top: 1rem solid var(--cor-rosa-nav-2);
+}
+
+header .menu-navegacao ul{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-family: var(--fonte);
+}
+
+header .menu-navegacao a{
+    color:azure;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .menu-navegacao a:hover,
+header .menu-navegacao a.atual{
+    color:var(--cor-rosa-escuro-2);
+}
+
+
+/*-------------------LATERAL--------------------*/
+
+
+aside{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: var(--cor-azul-mar);
+}
+
+aside .conteudo-aside{
+    background-color: var(--cor-azul-claro);
+    width: 90%;
+    height: 100%;
+    color:#FFF;
+    text-align: center;
+    font-family: var(--fonte);
+    font-weight:bold ;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+    padding:13px;
+}
+
+
+aside .conteudo-aside p{
+    background-color: var(--cor-azul-claro);
+    padding:4rem ;
+}
+
+aside .conteudo-aside h2{
+    padding: 15px;
+}
+
+
+/*----------------------SESSÃO-------------------------*/
+
+.posicao{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    line-height: 30px;
+    text-align: center;
+    display:inline-block;
+    background-color: var(--cor-mostarda);
+    box-shadow: 5px 14px 0px #CC7A0B;
+    padding:2rem 2rem 9rem 2rem;
+    width: 320px;
+    height: 80px;
+    border-radius: 3.5rem;
+}
+
+.btn a{
+    color:#FFF;
+    font-size: 22px;
+    font-weight: 700;
+    text-align:center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    background-color: var(--cor-azul-mar);
+    box-shadow: 0px 14px 0px var(--cor-azul-escuro);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+section{
+    background-color: var(--cor-azul-claro);
+    border-top: 1.2rem solid var(--cor-azul-mar);
+}
+
+article{
+    padding: 2rem 3rem;
+    background-color: var(--cor-rosa-medio);
+    font-size: 30px;
+    color: white;
+    margin:2rem;
+    margin-bottom: 2rem;
+}
+
+#quem-somos{
+    height: 512px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sorveteria tpb"
+
+}
+
+#quemsomos .tpbb{
+    grid-area: tpb;
+}
+
+section > article >img{
+    grid-area: sorveteria;
+}
+
+#nosso-diferencial p{
+    text-align: center;
+    padding-bottom: 3rem;
+
+}
+
+
+article h2{
+    font-size:35px ;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left:30px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+}
+
+article p{
+    font-size:25px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+#nosso-diferencial{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+
+/*---------------------GRID LAYOUT-------------------*/
+
+
+#conteudo-principal{
+    display: grid;
+    grid-template-columns: 1.2fr 2.5fr;
+}
+
+#sessao{
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-row-gap:10px;
+}
+
+
+/*----------------------FOOTER----------------------*/
+
+
+footer .rodape{
+    background-color:#FFCA72;
+    border-top:1rem solid var(--cor-casquinha);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    font-family:'Yusei Magic', sans-serif;
+}
+
+footer h1{
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    color:var(--cor-rosa-escuro);
+    text-shadow: 1px 5px 5px #C06E00;
+}
+
+footer .rodape h2{
+    font-weight: 700px;
+    font-size: 30px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
+}
+
+footer .rodape .icons{
+        padding-left:12.5rem ;
+        padding-right:12.5rem ;
+        padding-top:2.3rem;
+}
+
+footer .rodape:hover{
+background:url(../imagens/background-casquinha.png);
+}
